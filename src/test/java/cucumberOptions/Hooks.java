@@ -97,7 +97,12 @@ public class Hooks {
 			finally {
 				Runtime.getRuntime().addShutdownHook(new Thread(new BrowserCleanup()));
 			}
-
+			try {
+				Thread.sleep(5);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			driver.get(GlobalConstants.DEV_APP_URL);
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			log.info("------------- Started the browser -------------");

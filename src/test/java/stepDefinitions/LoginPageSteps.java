@@ -15,7 +15,7 @@ public class LoginPageSteps extends BasePage{
 	static String loginPageURL;
 	
 	public LoginPageSteps() {
-		this.driver = Hooks.openAndQuitBrowser();;
+		this.driver = Hooks.openAndQuitBrowser();
 	}
 	
 
